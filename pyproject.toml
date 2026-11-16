@@ -1,0 +1,23 @@
+[project]
+name = "stockdebate"
+version = "0.1.0"
+description = "Bull vs bear LLM debate on Indian stocks, with fact validation and a judge"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2",
+    "pandas>=2",
+    "yfinance>=0.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["stockdebate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
